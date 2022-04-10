@@ -13,21 +13,26 @@ You would need mysql and python. Clone this project and run it as any python pro
 
 # Dependencies
 ⮚ Speech to text & Text to Speech with various languages including Indian Languages.
+
 ⮚ Audio or Video Recordings to text  and can be save in pdf format.
+
 ⮚ Text editor with various editing tools & Spell Checker.
+
 ⮚ Paraphrasing to rephrase the sentences without changing its meaning.
+
 ⮚ Plagiarism to evaluate various research articles in general.
+
 ⮚ Translator with speech to text for regional languages & with multiple inputs to translate English to Hindi or vice versa.
+
 ⮚ Effective accuracy  
 
 # Use Cases
-⮚ Useful for students and teachers for
-preparing notes from online recordings.
-⮚ Useful for person having problem like
-Dyslexia.
-⮚ Useful for research Scholars, Professor,
-scientists & for various Working
-professionals.
+⮚ Useful for students and teachers for preparing notes from online recordings.
+
+⮚ Useful for person having problem like Dyslexia.
+
+⮚ Useful for research Scholars, Professor, scientists & for various Working professionals.
+
 ⮚ Useful for Security
 
 # sneak Peek
