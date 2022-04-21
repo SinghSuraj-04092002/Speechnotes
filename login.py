@@ -33,7 +33,7 @@ def forget_password():
                     showerror('Error', 'Contact Number is Incorrect ', parent=root2)
 
                 else:
-                    cur.execute('update signup set pwd=%s where cnum=%s', entry_newpwd.get(), entry_cnum.get())
+                    cur.execute('Update signup pwd=%s where cnum=%s', entry_newpwd.get(), entry_cnum.get())
                     con.commit()
                     con.close()
                     showinfo('Success', 'Password is reset, please login with new password', parent=root2)

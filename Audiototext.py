@@ -149,8 +149,9 @@ def conversion():
     clip.audio.write_audiofile(Entry_vid.get())
     r = sr.Recognizer()
     audio = sr.AudioFile(Entry_vid.get())
-    with audio as source:        
-        audtext = r.listen(source)
+    with audio as source:
+        r.adjust_for_ambient_noise(source, duration=1)       
+        audtext = r.record(source, duration=1000)
         try:
             for key, value in languages.items():
                 
@@ -236,7 +237,7 @@ About = Button(root,text='About',font=("Helvetica"),width=10,compound=LEFT,backg
 About.place(x=625,y=0)
 
 Paraphrasing= Button(root,text='Paraphrasing',font=("Helvetica"),width=10,compound=LEFT,background="white",fg="purple",cursor='hand2',bd=0,command=paraphrasing)
-Paraphrasing.place(x=480,y=1)
+Paraphrasing.place(x=480,y=0)
 
 LogOut_button = Button(root, text='LogOut',compound=LEFT,font=("Helvetica"),background='Magenta4',width=10, fg='White',command=close_window)
 LogOut_button.place(x=1150,y=0)

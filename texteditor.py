@@ -15,6 +15,7 @@ import googletrans
 import speech_recognition as sr
 from textblob import TextBlob              
 import pyttsx3
+from playsound import playsound
 
 win= tk.Tk()
 win.title("Speechnotes")
@@ -55,21 +56,14 @@ def print_area(txt):
 
 ######################################## spell checker ######################################################################################################################  
 
-
 def check_spelling():
     a=TextBlob(text_editor.get(1.0 ,END))
     correct_text=text2.insert(tk.END,a.correct()) 
     correct_text.pack()
-   
-     
-
 
 def clear():
     text2.delete(1.0, END)
     text_editor.delete(1.0, END)
-
-
-
 
 #############################################################################################################################################################################
 Home=tk.Button(win,text='Home',font=("Helvetica"),width=10,compound=tk.LEFT,background="white",fg="purple",cursor='hand2',bd=0,command=home)
@@ -519,6 +513,17 @@ for i in color_dict:
 ################################################################text to speech####################################################
 
 #text = text_editor.get(1.0, tk.END)
+languages1 = googletrans.LANGUAGES
+StringVar = googletrans.LANGUAGES
+
+# Convert to list
+language_list_2= list(languages1.values())
+
+translated_combo_2 = Combobox(frame1, width=20, value=language_list_2,font="arial 14")
+translated_combo_2.current(22)
+translated_combo_2.place(x=70,y=180)
+translated_combo_2.set('Select language')
+#text = text_editor.get(1.0, tk.END)
 def translate_it():
 	try:
 		for key, value in languages.items():
@@ -535,7 +540,7 @@ def translate_it():
     
 	except Exception as e:
 		messagebox.showerror("Translator", e)
-
+############################################################################
 # Grab Language List From GoogleTrans
 languages = googletrans.LANGUAGES
 StringVar = googletrans.LANGUAGES
@@ -555,9 +560,7 @@ translated_combo.current(22)
 translated_combo.place(x=70,y=40)
 translated_combo.set('Select language')
 
-speed_combobox=ttk.Combobox(frame1,values=['Fast','Normal','Slow'],font="arial 14",state='r',width=20)
-speed_combobox.place(x=70,y=180)
-speed_combobox.set('Normal')
+
 
 Select_language=Label(frame1,text='Select language',font=("Helvetica",15),width=20,compound=tk.RIGHT,background="white",fg="purple")
 Select_language.place(x=90,y=0)

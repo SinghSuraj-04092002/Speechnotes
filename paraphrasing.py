@@ -1,3 +1,4 @@
+   
 from cgitb import text
 from decimal import Rounded
 from googletrans import Translator,LANGUAGES
@@ -30,6 +31,10 @@ def Converter():
 
 def about():
     import about   
+
+def refresh():
+    root.destroy()
+    import paraphrasing
 
 
 root = Tk()
@@ -185,6 +190,8 @@ aboutbutton.place(x=840, y=35)
 Button_logout=Button(root, text='Logout',font=("Times New Roman bold",15),width=10,bg='purple4',fg='white',
                             cursor="hand2",command=close_window).place(x=1200,y=30)
 
+button_refreash=Button(root, text='refersh',font=("Times New Roman bold",15),width=10,bg='purple4',fg='white',
+                            cursor="hand2",command=refresh).place(x=1100,y=700)
 
 
 root.mainloop()

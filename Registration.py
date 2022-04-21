@@ -19,13 +19,18 @@ def clear():
     entry_cpwd.delete(0, END)
     check.set(0)
 
+
 def register():
+    mobile=entry_cnum.get()
     if entry_fname.get() == '' or entry_uname.get() == '' or entry_cnum.get() == '' or \
             entry_pwd.get() == '' or entry_cpwd.get() == '':
         showerror('Error', "All Fields Are Required", parent=root)
 
     elif entry_pwd.get() != entry_cpwd.get():
         showerror('Error', "Password Mismatch", parent=root)
+
+    elif len(mobile) >= 10:
+        showerror('Error', "Invalid Contact number", parent=root) 
 
     elif check.get() == 0:
         showerror('Error', "Please Agree To Our Terms & Conditions", parent=root)
