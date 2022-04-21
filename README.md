@@ -45,10 +45,4 @@ You would need mysql and python. Clone this project and run it as any python pro
 # Authors
 •	Suraj Singh @SinghSuraj-04092002
 
-•	Himanshu Rane
 
-•	Athrava takle @Atharvaaat
-
-•	Yogesh Kumbhar
-
-Note: roject is made during Mumbai Hackathon 2022 in 24 hrs
